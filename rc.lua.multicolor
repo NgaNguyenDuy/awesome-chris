@@ -15,6 +15,7 @@ local beautiful = require("beautiful")
 local naughty   = require("naughty")
 local drop      = require("scratchdrop")
 local lain      = require("lain")
+revelation      = require("modules/revelation")
 -- }}}
 
 -- {{{ Error handling
@@ -50,6 +51,7 @@ os.setlocale(os.getenv("LANG"))
 
 -- beautiful init
 beautiful.init(os.getenv("HOME") .. "/.config/awesome/themes/multicolor/theme.lua")
+revelation.init()
 
 local global_val = require("modules/global_val")
 

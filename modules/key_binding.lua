@@ -435,6 +435,13 @@ globalkeys = awful.util.table.join(
    awful.key({ modkey, "Shift"   }, "space",  function () awful.layout.inc(layouts, -1)  end),
    awful.key({ modkey, "Control" }, "n",      awful.client.restore),
    
+   -- Using revelation
+   awful.key({ modkey            }, "u", function()
+                revelation({rule={class="URxvt"}})
+                            end),
+   awful.key({modkey}, "e", revelation),
+
+   
       -- Run program with gmrun
       awful.key({ "Control" }, "Escape",
                  function () awful.util.spawn("gmrun") end),

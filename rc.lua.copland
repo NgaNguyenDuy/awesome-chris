@@ -16,6 +16,7 @@ local naughty   = require("naughty")
 local drop      = require("scratchdrop")
 local lain      = require("lain")
 local eminent   = require("eminent")
+revelation      = require("modules/revelation")
 -- }}}
 
 -- {{{ Error handling
@@ -52,7 +53,7 @@ os.setlocale(os.getenv("LANG"))
 
 -- beautiful init
 beautiful.init(os.getenv("HOME") .. "/.config/awesome/themes/copland/theme.lua")
-
+revelation.init()
 
 local global_val = require("modules/global_val")
 
