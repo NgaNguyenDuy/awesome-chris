@@ -62,8 +62,8 @@ local global_val = require("modules/global_val")
 
 -- {{{ Tags
 tags = {
-    names = { "www", "dev", "docs", "media" },
-    layout = { layouts[1], layouts[2], layouts[3], layouts[4] }
+    names = { "term", "www", "docs", "editors", "media", "skype" },
+    layout = { layouts[2], layouts[2], layouts[2], layouts[3], layouts[1], layouts[7] }
 }
 for s = 1, screen.count() do
    tags[s] = awful.tag(tags.names, s, tags.layout)
