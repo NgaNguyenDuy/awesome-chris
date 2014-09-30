@@ -26,7 +26,7 @@ awful.rules.rules = {
     { rule = { instance = "exe" },
      properties = { floating = true } },
     
-    { rule_any = { class = {"mpv", "MPlayer", "pinentry", "feh", "Vlc"} },
+    { rule_any = { class = {"mpv", "MPlayer", "pinentry", "feh", "Vlc", "Viewnior"} },
       properties = { floating = true } },
     -- apps tags
     { rule = { class = "Firefox" },
@@ -35,15 +35,16 @@ awful.rules.rules = {
     { rule = { class = "Nautilus" },
       properties = { tag = tags[1][5] } },
     
-    { rule = { class = "Chromium-browser" },
+    { rule = { class = "Chromium" },
       properties = { tag = tags[1][3] } },
-    { rule = { class = "Viewnior" },
-      properties = { tag = tags[1][6] } },
-    { rule = { class = "Okular" },
-      properties = { tag = tags[1][7] } },
     
-    { rule = { class = "Gvim" },
-      properties = { tag = tags[1][5] } },
+    -- { rule = { class = "Viewnior" },
+    --   properties = { tag = tags[1][6] } },
+    -- { rule = { class = "Okular" },
+    --   properties = { tag = tags[1][7] } },
+    
+    -- { rule = { class = "Gvim" },
+    --   properties = { tag = tags[1][5] } },
 
     -- { rule = { class = "Emacs", instance = "emacs" }, 
     --   properties = {tag = tags[1][4]}},

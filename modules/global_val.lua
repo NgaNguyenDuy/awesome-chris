@@ -59,6 +59,7 @@ appKeys = {
    c = custom_func.runApp("chromium"),
    o = custom_func.runApp("libreoffice"),
    a = custom_func.runApp("gnome-alsamixer"),
+   s = custom_func.runApp("skype"),
    u = custom_func.runApp(terminal)
 }
 

@@ -349,6 +349,7 @@ local awful     = require("awful")
 local lain      = require("lain")
 local drop      = require("scratchdrop")
 local custom_func = require "modules/custom_func"
+local alttab    = require("alttab")
 
 -- {{{ Key bindings
 globalkeys = awful.util.table.join(
@@ -564,6 +565,17 @@ globalkeys = awful.util.table.join(
                 awful.util.spawn_with_shell("mpc next || ncmpcpp next || ncmpc next || pms next")
                 mpdwidget.update()
              end),
+   awful.key({ altkey,           }, "Tab",
+             function ()
+                alttab(1, "Alt_L", "Tab", "ISO_Left_Tab")
+             end	     
+   ),
+   
+   awful.key({ altkey, "Shift"   }, "Tab",
+             function ()
+                alttab(-1, "Alt_L", "Tab", "ISO_Left_Tab")
+             end
+   ),
 
    -- Copy to clipboard
    awful.key({ modkey }, "c", function () os.execute("xsel -p -o | xsel -i -b") end),
