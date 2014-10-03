@@ -1,0 +1,72 @@
+# http://www.NoobsLab.com #
+# — Conky settings — #
+background no
+update_interval 1
+
+override_utf8_locale yes
+
+double_buffer yes
+no_buffers yes
+
+text_buffer_size 2048
+imlib_cache_size 0
+
+temperature_unit celsius
+
+# — Window specifications — #
+
+own_window yes
+own_window_type override
+own_window_transparent yes
+own_window_hints undecorated,sticky,skip_taskbar,skip_pager,below
+
+border_inner_margin 0
+border_outer_margin 0
+
+minimum_size 130
+maximum_width 984
+
+alignment tr
+gap_x 6
+gap_y 25
+
+# — Graphics settings — #
+draw_shades yes
+draw_outline no
+draw_borders no
+draw_graph_borders no
+
+# — Text settings — #
+use_xft yes
+xftfont pftempestafivecondensed:size=6
+xftalpha 0.5
+
+uppercase no
+
+default_color FFFFFF
+color1 95B700
+# — Lua Load — #
+	lua_load ./.conky/clock_rings.lua
+	lua_draw_hook_pre clock_rings
+
+TEXT
+${image ./.conky/orb-2.png -p 0,0} 
+${image ./.conky/orb-2.png -p 0,126}
+${color}${goto 47}${voffset 167}${cpu cpu0}%
+${color1}${goto 47}cpu
+${image ./.conky/orb-2.png -p 0,252}
+${color}${goto 60}${voffset 80}${memperc}%
+${color1}${goto 60}mem
+${image ./.conky/orb-2.png -p 0,378}
+${color}${goto 62}${voffset 91}${fs_used_perc /home}%
+${color1}${goto 62}hdd
+${image ./.conky/orb-2.png -p 0,504}
+${goto 50}${voffset 75}Network
+${goto 40}${if_up wlp7s0}${upspeedgraph wlp7s0 10,56 353535 ffffff}
+${color}${goto 40}Up:${goto 68}${color1}${upspeed wlp7s0}
+${color}${goto 40}Down:${goto 68}${color1}${downspeed wlp7s0}
+${goto 40}${downspeedgraph wlp7s0 10,56 353535 ffffff}${voffset 20}
+${goto 40}${endif}${if_up eth0}${upspeedgraph eth0 10,56 353535 ffffff}
+${color}${goto 40}Up:${goto 68}${color1}${upspeed eth0}
+${color}${goto 40}Down:${goto 68}${color1}${downspeed eth0}
+${goto 40}${downspeedgraph eth0 10,56 353535 ffffff}${endif}
