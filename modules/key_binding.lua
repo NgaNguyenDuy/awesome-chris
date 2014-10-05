@@ -599,7 +599,7 @@ globalkeys = awful.util.table.join(
        -- Printscreens
     awful.key({ }, "#107",
     function ()
-        awful.util.spawn("scrot -d 1 -e 'mv $f /home/chris/Pictures/Screenhosts/post/soc 2>/dev/null'")
+        awful.util.spawn("scrot -d 1 -e 'mv $f /home/chris/Pictures/Screenshots 2>/dev/null'")
     end),
     
     -- Shutdown

@@ -26,7 +26,7 @@ awful.rules.rules = {
     { rule = { instance = "exe" },
      properties = { floating = true } },
     
-    { rule_any = { class = {"mpv", "MPlayer", "pinentry", "feh", "Vlc", "Viewnior"} },
+    { rule_any = { class = {"mpv", "MPlayer", "pinentry", "feh", "Vlc", "Viewnior", "gimp"} },
       properties = { floating = true } },
     -- apps tags
     { rule = { class = "Firefox" },
