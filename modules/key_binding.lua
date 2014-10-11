@@ -592,6 +592,15 @@ globalkeys = awful.util.table.join(
    awful.key({ modkey }, "i", function () awful.util.spawn(browser2) end),
    awful.key({ modkey }, "s", function () awful.util.spawn(gui_editor) end),
    awful.key({ modkey }, "g", function () awful.util.spawn(graphics) end),
+   
+   
+   -- SCreen focus
+    awful.key({modkey,            }, "F1",     function () awful.screen.focus(1) end),
+    awful.key({modkey,            }, "F2",     function () awful.screen.focus(2) end),
+    
+    -- Move client to screen 2
+    awful.key({ modkey, "Shift"   }, "F1", function (c) awful.client.movetoscreen(c, 1) end),
+    awful.key({ modkey, "Shift"   }, "F2", function (c) awful.client.movetoscreen(c, 2) end),
 
    -- Prompt
    awful.key({ modkey }, "r", function () mypromptbox[mouse.screen]:run() end),
