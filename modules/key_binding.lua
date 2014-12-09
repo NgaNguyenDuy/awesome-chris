@@ -506,7 +506,7 @@ globalkeys = awful.util.table.join(
    awful.key({ modkey, "Shift"   }, "q",      awesome.quit),
 
    -- Dropdown terminal
-   awful.key({ altkey,	          }, "z",      function () drop(terminal) end),
+   awful.key({ altkey,	          }, "z",      function () drop("xterm") end),
 
    -- Widgets popups
    awful.key({ altkey,           }, "c",      function () lain.widgets.calendar:show(7) end),
