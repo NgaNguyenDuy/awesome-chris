@@ -1,0 +1,40 @@
+#Conky modified by Umair - http://www.NoobsLab.com
+#Source Url: http://gnome-look.org/content/show.php/Neon+Conky+and+Wallpaper+pack.?content=160323
+alignment top_left
+background no
+#border_margin 5
+border_width 75
+default_color F13737 #red
+double_buffer yes
+draw_borders no
+draw_outline no
+draw_shades no
+gap_x 200
+gap_y 400
+maximum_width 400
+minimum_size 175
+no_buffers yes
+override_utf8_locale yes
+own_window yes
+own_window_title conky
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+own_window_transparent yes
+own_window_type normal 	## normal /override /desktop
+own_window_argb_visual yes
+text_buffer_size 8000
+total_run_times 0
+update_interval 1
+uppercase no
+use_xft yes
+xftalpha 1
+xftfont Freesans:pixelsize=9
+
+
+
+TEXT
+${font Billo Dream:pixelsize=100}${alignc}${time %H:%M}${font}
+${voffset 10}${font Zekton:pixelsize=17}${alignc}${time %A} | ${time %d} ${time  %B} ${time %Y}${font}
+${voffset 10}${font Zekton:pixelsize=17}${alignc}Memory: ${mem} $alignr Total:${memmax}
+${voffset 10}${font Zekton:pixelsize=17}${alignc}CPU: ${cpu cpu}% $alignr IP:${if_up wlan0}${addr wlan0}${endif}${if_up eth0}${addr eth0}${endif}
+${voffset 10}${font Zekton:pixelsize=17}${alignc}Upload: ${if_up wlan0}${upspeed wlan0}${endif}${if_up eth0}${upspeed eth0}${endif} ${alignr} Download: ${if_up wlan0}${downspeed wlan0}${endif}${if_up eth0}${downspeed eth0}${endif}
+
