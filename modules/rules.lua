@@ -18,15 +18,18 @@ awful.rules.rules = {
     -- floating apps
     
     { rule = { class = "URxvt" },
-      properties = { opacity = 0.99 } },
+      properties = { opacity = 0.7 } },
 
     { rule = { instance = "plugin-container" },
-     properties = { floating = true } },
+      properties = { floating = true } },
+    
+    { rule = { instance = "MPlayer" },
+      properties = { floating = true } },
     
     { rule = { instance = "exe" },
-     properties = { floating = true } },
+      properties = { floating = true } },
     
-    { rule_any = { class = {"mpv", "MPlayer", "pinentry", "feh", "Vlc", "Viewnior", "gimp"} },
+    { rule_any = { class = {"mpv", "pinentry", "feh", "Vlc", "Viewnior", "gimp"} },
       properties = { floating = true } },
     -- apps tags
     { rule = { class = "Firefox" },

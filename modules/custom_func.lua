@@ -19,7 +19,7 @@ function custom_func.showNotification(title, msg)
          title = title,
          fg = "#0099cc",
          bg = "#000000",
-         opacity = 0.8,
+         opacity = 0.7,
          ontop = false,
          timeout = 1
    })
